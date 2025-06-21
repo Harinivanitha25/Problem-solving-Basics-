@@ -1,3 +1,6 @@
 # Problem-solving-Basics
 
- Solve_me_first - To compute the sum of two integers.
+- I have involved myself in the power of my problem solving skills and consistency.
+- I vow to solve one question from HackerRank's problem solving (algorithms) daily.
+
+ 
