@@ -1,27 +1,33 @@
 #include <stdio.h>
-
 int main()
 {
-    int n=5,i,j;
-
-    int arr[n],sum,min,max=0;
-    for(i=0;i<n;i++)
+    long int minsum=0,maxsum=0;
+    int arr[5];
+    for(int i=0;i<5;i++)
+     scanf("%d",&arr[i]);
+    long int min=arr[0],max=arr[0];
+    for(int i=1;i<5;i++)
     {
-      scanf("%d",&arr[i]);
+        if(min>arr[i])
+         min=arr[i];
+        else if(max<arr[i])
+         max=arr[i];
     }
-    for(i=0;i<n;i++)
-    {  sum=0;
-       for(j=0;j<n;j++)
-        { if(j!=i)
-            sum=sum+arr[j];
-        }
-        if(i==0)
-         min=sum;
-        if(sum<min)
-          min=sum;
-        if(sum>max)
-          max=sum;
+    if(min!=max)
+    {
+    for(int i=0;i<5;i++)
+    {
+        if(arr[i]!=min)
+          minsum=minsum+arr[i];
+        if(arr[i]!=max)
+          maxsum=maxsum+arr[i];
+    }}
+    else {
+    {
+        minsum=min*4;
+        maxsum=minsum;
     }
-    printf("%d %d",min,max);
+    }
+    printf("%ld %ld",maxsum,minsum);
     return 0;
 }
